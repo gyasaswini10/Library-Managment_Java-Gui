@@ -28,23 +28,22 @@ public class BookMain {
       bm.b.add(new Book(4, "Book4", "Author4", 25.0f));
       bm.b.add(new Book(5, "Book5", "Author5", 30.0f));
   	Scanner sc=new Scanner(System.in);
+	System.out.println("======= Welcome To Library Management System ======")
 		while(true) {
-			System.out.println("Enter 1)add 2)display 3)searchbyname "
-					+ "4)search by id any other exit 5)Lend book from available 6)diaplay previously lent books"
-					+ "");
-			System.out.println("choice please");
+			System.out.println(" To Add Book Details Please Enter 1"+"\n"+"To Display the books in the Library Please Enter 2\n"+"To Search a book by its name please enter 3\n"+"To Search a book by its ID please enter 4\n"+"To lend a book Please Enter 5\n"+"To display previously lent books Please Enter 6\n"+"Enter any other number To exit the System"+"\n");
+			System.out.println("Please Enter Your Choice");
 			ch=sc.nextInt();
 			switch(ch){
 			case 1:bm.addbook();
 			break;
 			case 2:bm.display();
 			break;
-			case 3:System.out.println("Enter name to search");
+			case 3:System.out.println("Enter Name to Search");
 				String nameTosearch=sc.next();
 
 			    bm.searchbyname(nameTosearch);
 			    break;
-			case 4:System.out.println("Enter id to search");
+			case 4:System.out.println("Enter ID to search");
 			long idTosearch=sc.nextLong();
 			bm.searchbyid(idTosearch);
 			break;
@@ -61,7 +60,7 @@ public class BookMain {
 		System.out.println(lent);
 	}
 	void LendBook() {
-		System.out.println("Enter book name to lend");
+		System.out.println("Enter Name of the Book you want to Lend");
 		Scanner sc=new Scanner(System.in);
 		int i,k;
 		String booknametoleand=sc.next();
@@ -69,7 +68,7 @@ public class BookMain {
 			 if(b.get(i).name.equals(booknametoleand)) {
 				 for(k=0;k<lent.size();k++) {
 					 if(lent.get(k).name.equals(booknametoleand)) {
-						 System.out.println("Book currently not available already lent to others");
+						 System.out.println("The Book You Want is currently using by others.");
 						 return;
 					 }
 					 }
