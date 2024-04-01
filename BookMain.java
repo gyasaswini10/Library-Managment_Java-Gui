@@ -68,14 +68,14 @@ public class BookMain {
 			 if(b.get(i).name.equals(booknametoleand)) {
 				 for(k=0;k<lent.size();k++) {
 					 if(lent.get(k).name.equals(booknametoleand)) {
-						 System.out.println("The Book You Want is currently using by others.");
+						 System.out.println("The Book You Want is currently is being used  by others.");
 						 return;
 					 }
 					 }
 					 if(k==lent.size()) {
 						 //book not in lent
 							lent.add(b.get(i));
-							System.out.println("Book lent successful");
+							System.out.println("Book available :lent successful");
 							return;
 					 }
 					 
