@@ -97,13 +97,13 @@ public class BookMain {
 		 for(i=0;i<b.size();i++) {
 		
 		 if(b.get(i).name.equals(nameTosearch)) {
-			 System.out.println("Found by "+nameTosearch);
+			 System.out.println(" Book Found by "+nameTosearch);
 			 return;
 			
 		 }
 		 }
 		 if(i==b.size()) {
-			 System.out.println("Not found of name");
+			 System.out.println(" Book Not found of name"+nameTosearch);
 		 }
 	 }
 	 void searchbyid(long id) {
@@ -111,12 +111,12 @@ public class BookMain {
 		 for(i=0;i<b.size();i++) {
 		
 		 if(b.get(i).id==id) {
-			 System.out.println("book Found by id"+id);
+			 System.out.println(" Book book Found by id"+id);
 			 break;
 		 }
 		 }
 		 if(i==b.size()) {
-			 System.out.println("Not found of id"+id);
+			 System.out.println(" Book Not found of id"+id);
 		 }
 	 }
 	}
