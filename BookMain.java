@@ -60,7 +60,7 @@ public class BookMain {
 		System.out.println(lent);
 	}
 	void LendBook() {
-		System.out.println("Enter Name of the Book you want to Lend");
+		System.out.println("Enter Name of the Book you want to borrow");
 		Scanner sc=new Scanner(System.in);
 		int i,k;
 		String booknametoleand=sc.next();
