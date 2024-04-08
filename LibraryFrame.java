@@ -1,22 +1,29 @@
 package Library;
+import java.awt.Color;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import javax.swing.*;
 
 public class LibraryFrame implements ActionListener{
 	JFrame s;
 	JLabel l1,l2,l3,l4,l5,l6,l7;
-	JTextField t1,t2,t3,t4,t5,t6;
-	JButton bu1,bu2,bu3,bu4;
+	JTextField t1,t2,t3,t4,t5,t6,t7;
+	JButton bu1,bu2,bu3,bu4,bu5;
 	 ArrayList<Book> b=new ArrayList<Book>();
+	 ArrayList<Book> lent=new ArrayList<Book>();
 	public static void main(String[] args) 
+	
 	{
 		new LibraryFrame();	
+      //  new MyFrame();
+
 	}
 	LibraryFrame()
 	{
 		s=new JFrame("Simple library managment system");
-		s.setSize(700, 900);
+		s.setSize(700, 1000);
 		s.setLayout(null);
 		l1=new JLabel("NAME");
 		l1.setBounds(100, 50, 100, 50);
@@ -48,7 +55,7 @@ public class LibraryFrame implements ActionListener{
 		s.add(t4);
 
 		
-		bu1=new JButton("Add Book ");
+		bu1=new JButton("Add Book  ");
 		bu1.setBounds(250, 450, 100, 50);
 		bu1.addActionListener(this);
 		s.add(bu1);
@@ -70,16 +77,27 @@ public class LibraryFrame implements ActionListener{
 		bu3.addActionListener(this);
 		s.add(bu3);
 		l6=new JLabel("search book by id");
-		l6.setBounds(100,750,100,50);
+		l6.setBounds(100,725,100,50);
 		
 		s.add(l6);
 		t6=new JTextField();
-		t6.setBounds(250, 750, 100, 50);
+		t6.setBounds(250, 725, 100, 50);
 		s.add(t6);
 		bu4=new JButton("search ");
-		bu4.setBounds(400, 750, 100, 50);
+		bu4.setBounds(400, 725, 100, 50);
 		bu4.addActionListener(this);
 		s.add(bu4);
+		l7=new JLabel("Lend book by name");
+		l7.setBounds(100,800,120,50);
+		
+		s.add(l7);
+		t7=new JTextField();
+		t7.setBounds(250, 800, 100, 50);
+		s.add(t7);
+		bu5=new JButton("Lend  ");
+		bu5.setBounds(400, 800, 100, 50);
+		bu5.addActionListener(this);
+		s.add(bu5);
 		
 		s.setVisible(true);
 	}
@@ -101,12 +119,12 @@ public class LibraryFrame implements ActionListener{
 			 for(i=0;i<b.size();i++) {
 			
 			 if(b.get(i).name.equals(  nameTosearch)) {
-				 System.out.println("Found by "+nameTosearch);
+				 System.out.println(" Book Found by "+nameTosearch);
 				 break;
 			 }
 			 }
 			 if(i==b.size()) {
-				 System.out.println("Not found of name");
+				 System.out.println(" Book Not found of name");
 			 }
 		}
 		if(e.getSource()==bu4) {
@@ -120,10 +138,32 @@ public class LibraryFrame implements ActionListener{
 			 }
 			 }
 			 if(i==b.size()) {
-				 System.out.println("Not found of id"+idTosearch);
+				 System.out.println(" Book Not found of id "+idTosearch);
 			 }
 		}
-	}
+		if(e.getSource()==bu5) {
+//			System.out.println("Enter book name to lend");
+//			Scanner sc=new Scanner(System.in);
+			int i,k;
+			String booknametoleand=t7.getText();
+			 for(i=0;i<b.size();i++) {
+				 if(b.get(i).name.equals(booknametoleand)) {
+					 for(k=0;k<lent.size();k++) {
+						 if(lent.get(k).name.equals(booknametoleand)) {
+							 System.out.println("Book currently not available already lent to others");
+							 return;
+						 }
+						 }
+						 if(k==lent.size()) {
+							 
+								lent.add(b.get(i));
+								System.out.println("Book lent successful");
+								return;
+						 }
+						 
+					 }
+				 }
+			System.out.println("Book not found in library");
 		}
-
-
+	}
+	}
