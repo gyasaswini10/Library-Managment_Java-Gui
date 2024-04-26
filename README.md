@@ -6,19 +6,26 @@ Readers and their details in order to lend books. The reader can search books by
 name, book id. He wants to do this in proper and easy manner as he feels that compiler 
 and terminal inputs are difficult and not easy to understand so, you have to use 
 Graphical User Interface  
+CLASS DIAGRAM:
+![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/481facdd-5182-4cdb-b246-fd3d1166dbe9)
 
 
-
-
+<br>
 
 
 GUI (Graphical user interface) for library management system:
+<br>
+
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/d33a94f8-f04c-4af7-ad98-4198449c47fa)
 
 Adding book to array list:
+<br>
+
 
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/da95dde3-bcac-49b0-97cd-844fbe1b47bd)
 Display books:
+<br>
+
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/e79c550e-abb9-412e-8f66-70aeb88bec07)
 
 
@@ -28,21 +35,35 @@ Display books:
  
 Search book by name:
 
+<br>
+
 CASE 1: Book present in array list
+
+<br>
 
  ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/67214a7e-8933-4379-9073-a9f70928d7e7)
 
  Search by name(CASE 2: Book  not present in array list):
  
- ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/6ce59538-661d-49c2-b4cd-9359964e80b8)
+ 
+<br>
+
+![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/6ce59538-661d-49c2-b4cd-9359964e80b8)  
+<br>
+
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/8475cfd4-1753-4ecf-9278-3ad0f824e544)
 
 Search book by id:
 
 
+
+
+<br>
+
 CASE 1: Book present in array list
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/34dbac84-5ece-4776-bba4-746e291dc6c5)
 
+<br>
   Search by id(CASE 2: Book  not present in array list)
 
  ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/b2c28f40-7a47-46d5-9e05-cbaebad3da12)
@@ -72,6 +93,7 @@ Corresponding  console input for each click in Gui :
 
 ![image](https://github.com/yasaswini2005/Library-Managment_Java-Gui/assets/139364347/d9f5fa23-35e9-4c5c-acb4-517d8806eca4)
  <br>ABSTRACT 
+<br>
                                               
 The library management system features a user-friendly GUI for efficient 
 book management. Owners can input book details like ID, name, author, and 
@@ -87,6 +109,7 @@ and organization in the library workflow. The GUI provides a seamless
 experience for both owners and readers alike. Overall, the system offers a robust 
 solution for modern library management needs. <br>
  
+<br>
 INDEX 
 S.NO    TITLE 
 1 Introduction 
@@ -100,6 +123,7 @@ S.NO    TITLE
 7 Conclusion 
  
  
+<br>
  
  
  
